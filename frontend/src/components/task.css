@@ -1,0 +1,53 @@
+.task-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.preview-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: height 150ms ease-in-out
+}
+
+.right-margin {
+    margin-right: 10px;
+}
+
+.textarea-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title-input {
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    overflow: auto;
+    overflow-Y: hidden;
+    outline: none;
+    resize: none;
+    width: 100%;
+}
+
+.description-input {
+    padding-left: 26px;
+    padding-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}

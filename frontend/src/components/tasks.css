@@ -1,0 +1,36 @@
+.taskCSS-enter {
+    opacity: 0;
+}
+
+.taskCSS-enter-active {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+
+.taskCSS-exit {
+    opacity: 1;
+}
+
+.taskCSS-exit-active {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.list-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.list-item {
+    justify-content: flex-start;
+}
+
+.list-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:  rgb(246, 246, 246);
+}
+
+.tasks-container {
+    width: 100%;
+    margin-left: 300px;
+}

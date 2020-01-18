@@ -1,0 +1,8 @@
+.App {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
