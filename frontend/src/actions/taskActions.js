@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { showLoading, hideLoading } from 'react-redux-loading-bar'
-import { proxy } from '../config';
 import {
     GET_TASKS,
     ADD_TASK,
@@ -27,7 +26,7 @@ export const getTasks = () => (dispatch, getState) => {
     if (getState().userStates.token) {
         dispatch(showLoading())
         axios
-        .get(proxy + '/tasks', tokenConfig(getState))
+        .get('/tasks', tokenConfig(getState))
         .then(res => {
             dispatch({
                 type: GET_TASKS,
@@ -46,7 +45,7 @@ export const getTasks = () => (dispatch, getState) => {
 export const deleteTask = id => (dispatch, getState) => {
     dispatch(showLoading())
     axios
-    .delete(proxy + `/tasks/${id}`, tokenConfig(getState))
+    .delete(`/tasks/${id}`, tokenConfig(getState))
     .then(res => {
         dispatch({
             type: DELETE_TASK,
@@ -59,7 +58,7 @@ export const deleteTask = id => (dispatch, getState) => {
 export const addTask = task => (dispatch, getState) => {
     dispatch(showLoading())
     axios
-    .post(proxy + '/tasks', task, tokenConfig(getState))
+    .post('/tasks', task, tokenConfig(getState))
     .then(res => {
         dispatch({
             type: ADD_TASK,
@@ -72,7 +71,7 @@ export const addTask = task => (dispatch, getState) => {
 export const editTask = (task, id) => (dispatch, getState) => {
     dispatch(showLoading())
     axios
-    .put(proxy + `/tasks/${id}`, task, tokenConfig(getState))
+    .put(`/tasks/${id}`, task, tokenConfig(getState))
     .then(res => {
         dispatch({
             type: EDIT_TASK,
@@ -85,7 +84,7 @@ export const editTask = (task, id) => (dispatch, getState) => {
 export const deleteAllTasks = () => (dispatch, getState) => {
     dispatch(showLoading())
     axios
-    .delete(proxy + '/tasks', tokenConfig(getState))
+    .delete('/tasks', tokenConfig(getState))
     .then(res =>{
         dispatch({
             type: DELETE_ALL_TASKS
